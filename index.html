@@ -74,9 +74,9 @@
     <div class="container">
         <div class="header">Biblioteca Escolar</div>
         <p>Accede a tu cuenta</p>
-        <form id="loginForm">
-            <input type="text" name="matricula" placeholder="Matrícula" required>
-            <input type="password" name="contrasena" placeholder="Contraseña" required>
+        <form id="loginForm" method="POST" action="#">
+            <input type="text" name="username" placeholder="Matrícula" required>
+            <input type="password" name="password" placeholder="Contraseña" required>
             <button type="submit">Ingresar</button>
         </form>
         <p id="error">Matrícula o contraseña incorrecta</p>
@@ -89,13 +89,13 @@
         document.getElementById("loginForm").addEventListener("submit", function(event) {
             event.preventDefault();
 
-            const matricula = event.target.matricula.value.trim();
-            const contrasena = event.target.contrasena.value;
+            const username = event.target.username.value.trim();
+            const password = event.target.password.value;
 
-            const matriculaValida = "123456";
-            const contrasenaValida = "biblioteca2025";
+            const usernameValido = "123456";
+            const passwordValido = "biblioteca2025";
 
-            if (matricula === matriculaValida && contrasena === contrasenaValida) {
+            if (username === usernameValido && password === passwordValido) {
                 window.location.href = "catalogo.html";
             } else {
                 document.getElementById("error").style.display = "block";
